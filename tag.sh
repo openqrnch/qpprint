@@ -8,7 +8,7 @@ FSL_CHECKOUT=`fossil status | grep '^checkout:' | awk '{print $2}'`
 
 TAGNAME=qpprint-$VERSION
 
-fossil tag $TAGNAME $FSL_CHECKOUT
+fossil tag add $TAGNAME $FSL_CHECKOUT
 fossil sync && fossil update
 
 git tag $TAGNAME
